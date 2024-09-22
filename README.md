@@ -52,13 +52,13 @@ ETCDCTL_API=3 etcdctl --write-out=table snapshot status /root/backup_etcd.db
 ### Now to restore the snapshot you took 
 
 ```bash
-ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd.db
+ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd.db --skip-hash-check=true
 ```
 
 # if want to restore it on specific location, use --data-dir flag
 
 ```bash
-ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd.db --data-dir=/root/newlocn
+ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd.db --data-dir=/root/newlocn --skip-hash-check=true
 ```
 
 # if used --data-dir flag then modify the etcd yaml and update volumes 
