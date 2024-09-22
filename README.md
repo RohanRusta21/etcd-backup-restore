@@ -18,3 +18,9 @@ sudo apt install etcd-client
     server certificate (–cert)
     server key (–key)
 ```
+
+# etcd static pod manifest file
+
+```bash
+cat /etc/kubernetes/manifests/etcd.yaml
+```
