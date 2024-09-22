@@ -45,7 +45,7 @@ ETCDCTL_API=3 etcdctl \
 # to verify correct backing up
 
 ```bash
-ETCDCTL_API=3 etcdctl --write-out=table snapshot status /opt/backup/etcd.db
+ETCDCTL_API=3 etcdctl --write-out=table snapshot status /root/backup_etcd
 ```
 
 ### Now to restore the snapshot you took 
