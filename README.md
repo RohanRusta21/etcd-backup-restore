@@ -39,19 +39,19 @@ ETCDCTL_API=3 etcdctl \
   --cacert=/etc/kubernetes/pki/etcd/ca.crt \
   --cert=/etc/kubernetes/pki/etcd/server.crt \
   --key=/etc/kubernetes/pki/etcd/server.key \
-  snapshot save /root/backup_etcd
+  snapshot save /root/backup_etcd.db
 ```
 
 # to verify correct backing up
 
 ```bash
-ETCDCTL_API=3 etcdctl --write-out=table snapshot status /root/backup_etcd
+ETCDCTL_API=3 etcdctl --write-out=table snapshot status /root/backup_etcd.db
 ```
 
 ### Now to restore the snapshot you took 
 
 ```bash
-ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd
+ETCDCTL_API=3 etcdctl snapshot restore /root/backup_etcd.db
 ```
 
 # if want to restore it on specific location, use --data-dir flag
