@@ -78,5 +78,7 @@ volumes:
 
 ```bash
 kubectl get pods -n kube-system | grep etcd
+kubectl get po -n kube-system
+kubectl describe pod etcd-master-node -n kube-system
 ```
 
